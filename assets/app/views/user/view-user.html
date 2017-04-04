@@ -1,0 +1,174 @@
+                    <div class="page-title">
+                        <h3>Depositor</h3>
+                        <div class="page-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Dashboard</a></li>
+                                <li><a ui-sref="all-users">Depositors</a></li>
+                                <li class="active">View Depositor</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="main-wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h3 class="panel-title">{{ user.firstname+" "+user.lastname }}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div role="tabpanel" class="tabpanel">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a data-href="info" role="tab" data-toggle="tab">Basic Information</a></li>
+                                                <li role="presentation"><a data-href="tab2" role="tab" data-toggle="tab">Contact Details</a></li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="info">
+                                                    <div class="row">
+                                                        <div class="col-md-4 jd-info-block">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           First Name
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.firstname }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Last Name
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.lastname }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Other Names
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.othernames }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-md-4 jd-info-block">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Gender
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.gender }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Date of Birth
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ factory.formatDate_1(user.dob) }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Registered On
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ factory.formatDate_1(user.date_registered) }}
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-md-4 jd-info-block" style="text-align: center">
+                                                            <div class="profile_picture_wrapper" id="img-placeholder" ng-init=" path = (user.photo) ? 'uploads/'+user.photo : 'system-images/avatar_1.png' ">
+                                                                <img ng-src="assets/images/{{ path }}" class="profile_picture" style="width: 150px; border-radius: 3px; height: 135px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="tab2">
+                                                    <div class="row">
+                                                        <div class="col-md-4 jd-info-block">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Phone No
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.phone }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Email Address
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.email }}
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-md-4 jd-info-block">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Address
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.address }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           City
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ user.city }}
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-md-4 jd-info-block">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           State
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ factory.getState(user.state_id) }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="info-item">
+                                                                        <td class="info-item-title">
+                                                                           Country
+                                                                        </td>
+                                                                        <td class="info-item-descr">
+                                                                            {{ 'Nigeria' }}
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Main Wrapper --> 
+                   

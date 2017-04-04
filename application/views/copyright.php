@@ -1,0 +1,1 @@
+<p class="text-center m-t-xs text-sm">2017 &copy; Powered by <strong>&LT;/&GT;</strong>CodeLab.</p>

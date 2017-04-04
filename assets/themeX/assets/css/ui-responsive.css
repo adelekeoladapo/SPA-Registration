@@ -1,0 +1,47 @@
+/* 
+    Created on : Oct 19, 2016, 7:46:09 AM
+    Author     : Adeleke Oladapo
+*/
+
+/*Unnecessaryly small device*/
+@media (max-width: 400px){
+    
+}
+
+/*Extra small devices*/
+@media (max-width: 768px) { 
+    .jd-form-block {
+    }
+    
+    .jd-h-tab-container .jd-h-tab-title-block {
+        width: 100%;
+    }
+
+    .jd-h-tab-container .jd-h-tab-content-block {
+        width: 100%;
+    }
+    
+    .dataTables_wrapper {
+        overflow-x: auto;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .nav-xs .nav-primary > ul > li > a {
+        overflow: hidden;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   
+    .main-table-with-sidebar {
+        padding-left: 0px;
+    }
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+

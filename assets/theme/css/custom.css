@@ -1,0 +1,242 @@
+/** tables **/
+
+.clickable-row{
+    cursor: pointer;
+}
+
+/** end table **/
+
+/** tab **/
+
+.tabpanel > ul.nav-tabs > li > a {
+    cursor: pointer;
+}
+
+/** end tab **/
+
+/** profile picture */
+
+.profile_picture_wrapper {
+    padding: 5px;
+    width: 246px;
+}
+
+.profile_picture, .profile_picture_wrapper>img {
+    width: 100%;
+    border-radius: 3px;
+    height: 235px;
+}
+
+.sidebar-profile img {
+    height: 60px;
+}
+
+/** end profile picture */
+
+
+/** upload button **/
+
+.select-btn-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type=file] {
+    display: block;
+}
+
+.custom-file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.select-image-btn {
+    border: solid 1px #ddd;
+    background-color: #f8f8f8;
+    padding: 8px 10px;
+    margin: auto;
+    cursor: pointer;
+}
+
+/** end upload button **/
+
+
+/** overlay **/
+
+.transparent-overlay {
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: rgba(22, 33, 40, 0.12);
+    right: 0;
+    display: none;
+}
+
+.transparent-overlay .loading-img {
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    margin-top: 290px;
+}
+
+/** end overlay **/
+
+
+/** modal **/
+
+/** end modal **/
+
+
+/** info block **/
+
+.jd-info-block .info-item {
+    margin-left: 5px;
+}
+
+.jd-info-block .info-item .info-item-title {
+    font-weight: bold;
+}
+
+.jd-info-block .table td {
+    border: 0;
+}
+
+/** end info block **/
+
+
+
+/** bank **/
+
+.login-box {
+    border: solid 1px #ddd;
+    padding: 15px;
+    background: #ffffff;
+}
+
+.form-btns{
+    text-align: right;
+}
+
+/** end bank **/
+
+/*progressbar*/
+#progressbar {
+    overflow: hidden;
+    counter-reset: step;
+    padding-left: 0;
+}
+#progressbar li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before {
+    background: #27AE60;
+    color: white;
+}
+
+#progressbar li.active:after {
+    background: #27AE60;
+    color: white;
+}
+
+
+.form-div-container .form-div {
+    display: none;
+}
+
+.form-div-container .form-div.active {
+    display: block;
+}
+
+.help-block {
+    margin-bottom: 5px;
+    float: left;
+    /* position: absolute; */
+    /* border: solid 1px red; */
+    margin-top: -2px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.login-box .user-box img {
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.select-image-btn {
+    border: solid 1px #ddd;
+    background-color: #f8f8f8;
+    padding: 5px 6px;
+    margin: auto;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 0, 0, 0.2) url(../../../assets/images/system-images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hero-captions {
+    padding-top: 80px;
+}
+
+.hero-title {
+    font-size: 48px;
+    line-height: 52px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    color: #fff;
+}

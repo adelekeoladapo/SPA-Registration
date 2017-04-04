@@ -1,0 +1,77 @@
+                    <div class="page-title">
+                        <h3>Manage Profile</h3>
+                        <div class="page-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Dashboard</a></li>
+                                <li><a href="#">My Profile</a></li>
+                                <li class="active">Manage Profile</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="main-wrapper">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">My Profile</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form id="form-profile">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Full Name</label>
+                                                <input type="text" required class="form-control" id="exampleInputEmail1" placeholder="Full Name" ng-model="user.fullname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Phone No</label>
+                                                <input type="text" ng-disabled="true" class="form-control" id="exampleInputPassword1" placeholder="Phone No" ng-model="user.phone">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Email Address</label>
+                                                <input type="text" ng-disabled="true" class="form-control" id="exampleInputPassword1" ng-model="user.email" placeholder="Email Address">
+                                            </div>
+                                            <button type="submit" class="btn btn-success" ng-click="updateUser()">Save</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="panel panel-white">
+                                    <div class="panel-heading clearfix">
+                                        <h4 class="panel-title">My Profile Picture</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="row" id="form-profile-picture">
+                                            <div class="col-md-6">
+                                                <input type="hidden" name="user-id" value="{{ user.user_id }}">
+                                                <div class="profile_picture_wrapper" id="img-placeholder" ng-init=" path = (user.photo) ? 'uploads/'+user.photo : 'system-images/avatar_1.png' ">
+                                                    <img ng-src="assets/images/{{ path }}" class="profile_picture">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="select-btn-container">
+                                                    <input type="file" class="custom-file-input" accept="image/*" id="photo" name="photo">
+                                                    <span class="select-image-btn" onclick="$('.custom-file-input').click();">Select Image</span>
+                                                    <!--<span class="photo-spec">Accepted formats: .jpg, .gif and .jpeg</span>-->
+                                                </div>
+                                                <p>
+                                                    <button type="button" ng-click="updateProfilePicture()" class="btn btn-success">Save Image</button>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Main Wrapper -->
+                    
+                    
+                    
+                    <script>
+                        $(function(){
+                            $('#img-placeholder').imagepreview({
+                                input: '[name="photo"]',
+                                reset: '',
+                                preview: '#img-placeholder'
+                            });
+                        });
+                    </script>
