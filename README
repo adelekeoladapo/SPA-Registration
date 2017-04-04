@@ -1,1 +1,29 @@
+****************************************
+**      INSTALLATION PROCEDURE        **
+****************************************
 
+Tools User
+Languages: HTML, PHP, JavaScript, CSS, Ajax
+Frameworks: CodeIgniter, AngularJS
+Database: MySQL
+
+Requirements:
+1. Apache and Mysql server. (Xampp or Wamp)
+2. Web browser
+
+
+Installation:
+1. Create a new Mysql database named "solution" in your phpmyadmin.
+2. Import the "solution.sql" file into the newly created database.
+3. Copy and past the "solution" folder into your htdocs or www directory as the case may be.
+4. Point your desired browser to this address "http://localhost/solution"
+
+For the admin portal:
+1. Point your desired browser to this address "http://localhost/solution/admin"
+Login Parameters:
+Email: admin@admin.com
+Password: password
+
+Kindly contact me if there's any challenge.
+Phone: 08020803585
+Email: adelekeoladapo@gmail.com
